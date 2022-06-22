@@ -22,6 +22,7 @@ function renderResult(resultArr){
     removePrevious(searchResultContainer);
     resultArr.map((hero)=>{
         const li= document.createElement("li");
+        li.setAttribute("id",`HeroId-${hero.id}`);
         // li.classList.add("card");
         const constHTML='<div class="card mb-3" style=" width:22vw;margin:auto">'+
         '<div class="row g-0">'+
@@ -42,7 +43,8 @@ function renderResult(resultArr){
             if(check!=-1){
               varHTML=
               // '<button type="button" class="btn btn-danger" onClick="removeFromFavourites(this.parentElement.parentElement.lastElementChild)"><i class="bi bi-heart"></button>'+
-              `<i class="fa-solid fa-heart fa-2x" style="color:red;" onClick="removeFromFavourites(this.parentElement.parentElement.lastElementChild)" id=fav-button-${hero.id}></i>`+
+              //`<i class="fa-solid fa-heart fa-2x" style="color:red;" onClick="removeFromFavourites(this)" id=fav-button-${hero.id}></i>`+
+              `<i class="fa-solid fa-heart fa-2x" style="color:red;" data-id="favHeroId-${hero.id}" onClick="removeFromFavourites(this)" id=fav-button-${hero.id}></i>`+
               '</div>'+
               '<div style="display:none">'+hero.id+'</div>'+
               '</div>'+
