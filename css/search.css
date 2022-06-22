@@ -13,3 +13,6 @@ transform: scale(1.25);
 body{
     background-color: lightseagreen;
 }
+.card{
+    transition: all 0.3s ease-in;
+}

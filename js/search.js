@@ -166,6 +166,7 @@ function addFavouriteCard(res,favArr){
   })
   const li= document.createElement("li");
         // li.classList.add("card");
+        li.setAttribute("id",`favHeroId-${res.id}`);
         li.innerHTML=
         '<div class="card mb-3" style=" width:70%;margin:auto">'+
           '<div class="row g-0">'+
@@ -181,7 +182,8 @@ function addFavouriteCard(res,favArr){
                 '<div class="button-container" style="padding:3px">'+
                       // '<button type="button" class="btn btn-success " onClick="addToFavourites(this.parentElement.parentElement.lastElementChild)">Remove</button>'+
                       // '<button type="button" class="btn btn-danger"onClick="removeFromFavourites(this.parentElement.parentElement.lastElementChild)">Danger</button>'+
-                      `<i class="fa-solid fa-heart fa-2x" style="color:red;" onClick="removeFromFavourites(this.parentElement.parentElement.lastElementChild)" id=fav-button-${res.id}></i>`+
+                      // `<i class="fa-solid fa-heart fa-2x" style="color:red;" data-id="favHeroId-${res.id}" onClick="removeFromFavourites(this.parentElement.parentElement.lastElementChild)" id=fav-button-${res.id}></i>`+
+                      `<i class="fa-solid fa-heart fa-2x" style="color:red;" data-id="favHeroId-${res.id}" onClick="removeFromFavourites(this)" id=fav-button-${res.id}></i>`+
                 '</div>'+
                 '<div style="display:none">'+res.id+'</div>'+
             '</div>'+
@@ -194,9 +196,11 @@ function addFavouriteCard(res,favArr){
 //removes a hero from favourite
 function removeFromFavourites(data){
   let favArr=JSON.parse(localStorage.getItem("favArr"));
-  let filtered=favArr.filter((value)=>value!=data.innerText);
+  let filtered=favArr.filter((value)=>value!=data.getAttribute("data-id").split("-")[1]);
   localStorage.setItem("favArr",JSON.stringify(filtered));
-  location.reload();
+  const heroToRemove=document.getElementById(data.getAttribute("data-id"));
+  heroToRemove.remove();
+  // location.reload();
 
 }
 
