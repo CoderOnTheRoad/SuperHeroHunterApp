@@ -3,6 +3,13 @@ const searchKeyWords= new Array();
 const searchResultContainer=document.getElementById("search-results");
 const favouriteContainer=document.getElementById("favourite-container");
 
+function checkFavArrExists(){
+  const favArr=JSON.parse(localStorage.getItem("favArr"));
+  if(favArr==undefined){
+    localStorage.setItem("favArr",JSON.stringify([]));
+  }
+}
+checkFavArrExists();
 //Removes all childs from a container
 function removePrevious(container) {
     while (container.firstChild) {
