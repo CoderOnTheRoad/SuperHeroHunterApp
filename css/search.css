@@ -1,0 +1,15 @@
+#search-results::-webkit-scrollbar, #collapseExample::-webkit-scrollbar,body::-webkit-scrollbar {
+    display: none;
+}
+#search-results,#collapseExample,body {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+.card:hover{
+background-color: lightpink;
+transform:translateX(2px);
+transform: scale(1.25);
+}
+body{
+    background-color: lightseagreen;
+}

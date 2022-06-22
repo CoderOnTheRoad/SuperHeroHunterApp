@@ -1,0 +1,14 @@
+body{
+    color: aqua;
+}
+
+.card-info-container:hover{
+ background-color: aqua;
+ transform: scale(1.25);
+ z-index: 1;
+}
+.card-info-container{
+
+    transition: all 0.7s ease-in-out;
+   }
+

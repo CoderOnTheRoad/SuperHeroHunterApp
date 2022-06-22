@@ -5,46 +5,58 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="../css/hero.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
 </head>
-<body>
-    <div class="card" style="width: 30rem;margin: auto;">
+<body style="background-color: grey;">
+    <div class="card" style="width: 40rem;margin: auto;margin-top: 20px;">
         <img src="..." class="card-img-top" alt="..." id="hero-image" style="height:400px;">
-        <div class="card-body">
-          <h5 class="card-title">Name: <span id="name"></span></h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <div class="card-body card-info-container">
+            <h5 class="card-title">Name: <span id="name"></span></h5>
+        </div>
+        <div class="card-body" style="display:flex;flex-direction: row;justify-content: space-around;">
+            <a class="btn btn-primary" data-bs-toggle="collapse" href="#bioContainer" role="button" aria-expanded="false" aria-controls="bioContainer">
+              BIO
+            </a>
+            <a class="btn btn-primary" data-bs-toggle="collapse" href="#powerstatsContainer" role="button" aria-expanded="false" aria-controls="powerstatsContainer">
+              POWERSTATS
+            </a>
+            <a class="btn btn-primary" data-bs-toggle="collapse" href="#appearanceContainer" role="button" aria-expanded="false" aria-controls="appearanceContainer">
+              APPEARANCE
+            </a>
+            <a class="btn btn-primary" data-bs-toggle="collapse" href="#workContainer" role="button" aria-expanded="false" aria-controls="workContainer">
+              WORK
+            </a>
+            <a class="btn btn-primary" data-bs-toggle="collapse" href="#connectionsContainer" role="button" aria-expanded="false" aria-controls="connectionsContainer">
+              CONNECTIONS
+            </a>
         </div>
         <ul class="list-group list-group-flush">
-          <li class="list-group-item">Bio:
-            <ul id="bio">
-            </ul>
-          </li>
-          <li class="list-group-item">Powerstats:
-            <ul id="powerstats">
+            <li class="list-group-item card-info-container collapse" id="bioContainer"><h4 style="color:red;">Bio:</h4>
+                <ul id="bio" style="list-style:none ;">
+                </ul>
+            </li>
+            <li class="list-group-item card-info-container collapse" id="powerstatsContainer"><h4 style="color:red;">Powerstats:</h4>
+                <ul id="powerstats" style="list-style:none ;">
 
-            </ul>
-          </li>
-          <li class="list-group-item">Appearance:
-            <ul id="appearance">
+                </ul>
+            </li>
+            <li class="list-group-item card-info-container collapse" id="appearanceContainer"><h4 style="color:red;">Appearance:</h4>
+                <ul id="appearance" style="list-style:none ;">
 
-            </ul>
-          </li>
-          <li class="list-group-item">Work:
-            <ul id="work">
+                </ul>
+            </li>
+            <li class="list-group-item card-info-container collapse" id="workContainer"><h4 style="color:red;">Work:</h4>
+                <ul id="work" style="list-style:none ;">
 
-            </ul>
-          </li>
-          <li class="list-group-item">Connections:
-            <ul id="connections">
+                </ul>
+            </li>
+            <li class="list-group-item card-info-container collapse" id="connectionsContainer"><h4 style="color:red;">Connections:</h4>
+                <ul id="connections" style="list-style:none ;">
 
-            </ul>
-          </li>
+                </ul>
+            </li>
         </ul>
-        <!-- <div class="card-body">
-
-          <a href="#" class="card-link">Card link</a>
-          <a href="#" class="card-link">Another link</a>
-        </div> -->
     </div>
     <script src="../js/hero.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>

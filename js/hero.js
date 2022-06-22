@@ -5,10 +5,11 @@ const appearance=document.getElementById("appearance");
 const work= document.getElementById("work");
 const connections=document.getElementById("connections");
 const image=document.getElementById("hero-image")
-
+const name=document.getElementById("name");
 
 function addDataToDom(res){
     if(res){
+        name.innerText=res.name;
         image.src=res.images.lg;
         const bioKeys=Object.keys(res.biography);
         for(let i=0;i<bioKeys.length;i++){
