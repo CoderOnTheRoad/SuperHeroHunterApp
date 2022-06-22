@@ -5,7 +5,7 @@ const favouriteContainer=document.getElementById("favourite-container");
 
 function checkFavArrExists(){
   const favArr=JSON.parse(localStorage.getItem("favArr"));
-  if(favArr==undefined){
+  if(favArr==null){
     localStorage.setItem("favArr",JSON.stringify([]));
   }
 }
